@@ -84,7 +84,7 @@ function useEth() {
         },
       },
       // Force connect on walletCheck for WalletConnect
-      walletCheck: [{ checkName: "network" }, { checkName: "connect" }],
+      // walletCheck: [{ checkName: "network" }, { checkName: "connect" }],
     });
 
     // Update onboard
