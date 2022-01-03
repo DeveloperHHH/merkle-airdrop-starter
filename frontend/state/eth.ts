@@ -19,7 +19,7 @@ const wallets: (WalletModule | WalletInitOptions)[] = [
   { walletName: "metamask" },
   {
     walletName: "walletConnect",
-    infuraKey: "89781dd4fcbd49dea42ede60013274de",
+    infuraKey: "e6946d4123f0498e8154d5c1cc487e54",
 
   },
 ];
