@@ -14,7 +14,8 @@ export default function Home() {
   // Routing
   const { push } = useRouter();
   // Authentication status
-  const { address }: { address: string | null } = eth.useContainer();
+  const { address, unlock }: { address: string | null; unlock: Function } =
+  eth.useContainer();
 
   return (
     <Layout>
@@ -45,7 +46,9 @@ export default function Home() {
         {/* Claim button */}
         {!address ? (
           // If not authenticated, disabled
-          <button disabled>Connect Wallet to Claim $ZURRENCY</button>
+          <button onClick={() => unlock()}>Connect Wallet to Claim $ZURRENCY</button>
+
+          // <button disabled>Connect Wallet to Claim $ZURRENCY</button>
         ) : (
           // Else, reroute to /claim
           <button onClick={() => push("/claim")}>Claim $ZURRENCY</button>
